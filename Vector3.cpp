@@ -24,6 +24,14 @@ float Vector3::Distance(Vector3 from, Vector3 to) {
 	return Sqrt(Sqrd(to.X - from.X) + Sqrd(to.Y - from.Y) + Sqrd(to.Z - from.Z));
 }
 
+float Vector3::Angle(Vector3 from, Vector3 to) {
+	return Matha::Acos(Vector3::Dot(from, to) / (from.Magnitude * to.Magnitude));
+}
+
+Vector3 Vector3::Project(Vector3 to, Vector3 from) {
+	return to * (Vector3::Dot(from, to) / Sqrd(to.Magnitude));
+}
+
 Vector3 Vector3::operator+(Vector3 const& v)
 {
 	Vector3 res(0, 0, 0);
