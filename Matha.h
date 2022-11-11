@@ -5,5 +5,7 @@ public:
 
 	static float Sqrt(float a);
 
-	static float Acos(float angle);
+	static float Acos(float cos);
+
+	static float Asin(float sin);
 };
