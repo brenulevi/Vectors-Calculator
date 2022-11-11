@@ -31,6 +31,9 @@ public:
 	*/
 	static float Angle(Vector3 from, Vector3 to);
 
+	/*
+	Return the projection of the vector in another one
+	*/
 	static Vector3 Project(Vector3 from, Vector3 to);
 
 	Vector3 operator+(Vector3 const& v);
@@ -38,6 +41,10 @@ public:
 	Vector3 operator-(Vector3 const& v);
 
 	Vector3 operator*(float const k);
+
+	bool operator==(Vector3 const& v);
+
+	bool operator!=(Vector3 const& v);
 
 	friend std::ostream& operator<<(std::ostream& out, const Vector3& v);
 };

@@ -58,6 +58,21 @@ Vector3 Vector3::operator*(float const k) {
 	return res;
 }
 
+bool Vector3::operator==(Vector3 const& v) {
+	if (X == v.X && Y == v.Y && Z == v.Z) {
+		return true;
+	}
+	return false;
+}
+
+bool Vector3::operator!=(Vector3 const& v) {
+	if (X != v.X || Y != v.Y || Z != v.Z) {
+		return true;
+	}
+	return false;
+}
+
+
 std::ostream& operator<<(std::ostream& out, const Vector3& v) {
 	return out << "(" << v.X << ", " << v.Y << ", " << v.Z << ")";
 }
