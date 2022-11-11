@@ -40,7 +40,8 @@ public:
 	
 	Vector3 operator-(Vector3 const& v);
 
-	Vector3 operator*(float const k);
+	friend Vector3 operator*(float const k, const Vector3& v);
+	friend Vector3 operator*(const Vector3& v, float const k);
 
 	bool operator==(Vector3 const& v);
 

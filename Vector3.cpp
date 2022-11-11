@@ -50,12 +50,16 @@ Vector3 Vector3::operator-(Vector3 const& v)
 	return res;
 }
 
-Vector3 Vector3::operator*(float const k) {
+Vector3 operator*(const Vector3& v, float const k) {
 	Vector3 res(0, 0, 0);
-	res.X = X * k;
-	res.Y = Y * k;
-	res.Z = Z * k;
+	res.X = v.X * k;
+	res.Y = v.Y * k;
+	res.Z = v.Z * k;
 	return res;
+}
+
+Vector3 operator*(float const k, const Vector3& v) {
+	return operator*(v, k);
 }
 
 bool Vector3::operator==(Vector3 const& v) {
