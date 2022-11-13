@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 
 class Vector3 {
@@ -22,6 +23,11 @@ public:
 	static Vector3 Cross(Vector3 a, Vector3 b);
 
 	/*
+	Calculate the mist product of vectors: a.(b x c)
+	*/
+	static float Mist(Vector3 a, Vector3 b, Vector3 c);
+
+	/*
 	Calculate the distance between two vectors
 	*/
 	static float Distance(Vector3 from, Vector3 to);
@@ -36,6 +42,9 @@ public:
 	*/
 	static Vector3 Project(Vector3 from, Vector3 to);
 
+	/*
+	Operator overloads
+	*/
 	Vector3 operator+(Vector3 const& v);
 	
 	Vector3 operator-(Vector3 const& v);

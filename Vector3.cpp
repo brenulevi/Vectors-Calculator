@@ -20,6 +20,10 @@ Vector3 Vector3::Cross(Vector3 a, Vector3 b) {
 	return Vector3(a.Y * b.Z - b.Y * a.Z, a.Z * b.X - a.X * b.Z, a.X * b.Y - a.Y * b.X);
 }
 
+float Vector3::Mist(Vector3 a, Vector3 b, Vector3 c) {
+	return Vector3::Dot(a, Vector3::Cross(b, c));
+}
+
 float Vector3::Distance(Vector3 from, Vector3 to) {
 	return Sqrt(Sqrd(to.X - from.X) + Sqrd(to.Y - from.Y) + Sqrd(to.Z - from.Z));
 }

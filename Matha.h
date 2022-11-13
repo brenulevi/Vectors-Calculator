@@ -1,4 +1,7 @@
 #pragma once
+
+#include <iostream>
+
 class Matha {
 public:
 	static float Sqrd(float a);
